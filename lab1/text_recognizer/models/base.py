@@ -24,7 +24,7 @@ class Model:
 
         if network_args is None:
             network_args = {}
-        self.network = network_fn(self.data.input_shape, self.data.output_shape, **network_args)
+        self.network = network_fn(self.data.input_shape, self.data.output_shape, **network_args) # KERAS NETWORK model
         self.network.summary()
 
         self.batch_augment_fn = None
